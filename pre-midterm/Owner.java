@@ -43,14 +43,15 @@ public class Owner {
                 + this.animal.getPower() + ", age = " + this.animal.getAge();
     }
 
-    // protectOwnerFrom ยังผิดนะครับ
+
     public void protectOwnerFrom(Animal a) {
         if (a instanceof Pigeous) {
-            Pigeous p = (Pigeous) a;
-            p.wingAttack(this.animal);
+            Dog d = new Dog(name, 0);
+            d.kick(a);
         } else if (a instanceof Dog) {
-            Dog d = (Dog) a;
-            d.kick(this.animal);
+            Pigeous p = new Pigeous();
+            p.wingAttack(a);
         }
     }
+
 }

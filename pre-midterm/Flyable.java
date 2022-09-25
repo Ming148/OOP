@@ -8,5 +8,5 @@
  * @author m.i.n.g_lee
  */
 public interface Flyable {
-    public void fly();
+    public abstract void fly();
 }

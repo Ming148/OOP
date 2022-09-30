@@ -1,4 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
+ */
+// package pre.midterm;
+
+/**
+ *
+ * @author m.i.n.g_lee
+ */
 public class Owner {
+
     protected final String name;
     protected Animal animal;
 
@@ -23,7 +34,7 @@ public class Owner {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setAnimal(Animal animal) {
@@ -35,7 +46,7 @@ public class Owner {
     }
 
     public void feedFood(Food f) {
-        this.animal.setPower(animal.getPower() + f.getPower());
+        animal.setPower(f.getPower() + animal.getPower());
     }
 
     public String toString() {
@@ -43,15 +54,11 @@ public class Owner {
                 + this.animal.getPower() + ", age = " + this.animal.getAge();
     }
 
-
     public void protectOwnerFrom(Animal a) {
-        if (a instanceof Pigeous) {
-            Dog d = new Dog(name, 0);
-            d.kick(a);
-        } else if (a instanceof Dog) {
-            Pigeous p = new Pigeous();
-            p.wingAttack(a);
+        if (animal instanceof Pigeous) {
+            ((Pigeous) animal).wingAttack(a);;
+        } else if (animal instanceof Dog) {
+            ((Dog) animal).kick(a);
         }
     }
-
 }
